@@ -21,6 +21,10 @@ module.exports = function(opts){
         .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
         .pipe(opts.gulp.dest(labpath + '/_layouts'));
 
+      opts.gulp.src('templates/sample/**/*.md')
+        .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
+        .pipe(opts.gulp.dest(labpath));
+
       opts.gulp.src('templates/sample/.bowerrc')
         .pipe(opts.gulp.dest(labpath));
 
@@ -30,6 +34,12 @@ module.exports = function(opts){
       opts.gulp.src('templates/sample/assets/**/*.{js,json,scss,svg}')
         .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
         .pipe(opts.gulp.dest(labpath + '/assets/'));
+
+      opts.gulp.src('templates/sample/assets/**/*.{js,json,scss,svg}')
+        .pipe(opts.gulp.dest(labpath + '/assets/'));
+
+      opts.gulp.src('templates/sample/data/**/*.{json,yaml}')
+        .pipe(opts.gulp.dest(labpath + '/data/'));
 
 
 

@@ -7,56 +7,12 @@
 
     <div class="row">
       <div class="small-4 small-offset-4 text-center">
-        <a href="/">
-          {{site_global.me}}
-        </a>
+          <h1>labpath: {{labpath}}</h1>
       </div>
     </div>
 
     <div class="row">
       <div class="small-12">
-
-        <div class="posts">
-
-
-          {% for post in collections.posts %}
-
-            {#
-              <pre>
-                {{post | dump}}
-              </pre>
-            #}
-
-            <div class="section post-tease">
-              <div class="row align-center">
-                <div class="small-12 columns">
-                  <header>
-                    <a class="title" href="{{ post.path }}">
-                      {{post.title}}
-                    </a>
-
-                    <time>{{post.stats.atime | date}}</time>
-                  </header>
-
-                  <div class="excerpt">
-
-                    {{post.excerpt}}
-                  </div>
-
-                  <footer>
-                    <div class="tags">
-                      {% for tag in post.tags %}
-                          <a href="/tag/{{post.tagsUrlSafe[loop.index - 1]}}">{{tag}}</a>
-                      {% endfor %}
-                    </div>
-                  </footer>
-                </div>
-              </div>
-            </div>
-
-          {% endfor %}
-
-        </div><!-- /.posts -->
 
       </div>
     </div>
