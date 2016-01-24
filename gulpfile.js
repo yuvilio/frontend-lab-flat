@@ -18,7 +18,7 @@ require('./gulp-tasks/scripts.js')( {gulp: gulp, config: config } );
 gulp.task('server', function () {
   return browserSync.init(['dist/**/*'], {
     server: {
-      baseDir: distPath,
+      // baseDir: distPath,
       'proxy': 'frontend-lab-flat.dev'
     },
     open: false
