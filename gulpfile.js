@@ -8,9 +8,11 @@ var distPath = './dist/' + config.labpath;
 
 
 //tasks
+require('./gulp-tasks/init.js')( {gulp: gulp, config: config } );
 require('./gulp-tasks/templates.js')( {gulp: gulp, config: config } );
 require('./gulp-tasks/styles.js')( {gulp: gulp, config: config } );
 require('./gulp-tasks/scripts.js')( {gulp: gulp, config: config } );
+
 
 
 gulp.task('server', function () {
