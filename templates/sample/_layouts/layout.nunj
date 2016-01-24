@@ -4,19 +4,19 @@
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{site_global.site_name}} | {{title}}</title>
+    <title>{{labpath}}</title>
     <meta name="description" content="{{metatag_description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% block header_scripts %}{% endblock %}
-    
+
     {#
       favicon:
       <link rel="apple-touch-icon" href="apple-touch-icon.png">
       <!-- Place favicon.ico in the root directory -->
     #}
 
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/{{distpath}}/assets/css/main.css">
 
   </head>
 
@@ -34,7 +34,7 @@
     {# general scripts #}
 
     {# scripts to combine with gulp-useref #}
-    <script src="/assets/js/all.js"></script>
+    <script src="/{{distpath}}/assets/js/all.js"></script>
 
     <!-- test -->
 
