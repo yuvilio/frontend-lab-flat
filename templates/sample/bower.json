@@ -1,0 +1,22 @@
+{
+  "name": "yuvilio.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yuvilio/yuvilio.github.io",
+  "authors": [
+    "<yuviliom@gmail.com>"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "waypoints": "~4.0.0",
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.4.0",
+    "foundation-sites": "~6.1.1"
+  }
+}

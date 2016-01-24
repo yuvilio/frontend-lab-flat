@@ -1,0 +1,22 @@
+<a href="/" class="logo">
+  <svg class="icon" viewBox="0 0 100 100">
+    <use xlink:href="#yuvilio-path" />
+  </svg>
+</a>
+
+{#
+  <div class="icon-bar five-up">
+    <a class="item">
+      <i class="fa fa-home"></i>
+      <label>Home</label>
+    </a>
+    <a class="item">
+      <i class="fa fa-sticky-note"></i>
+      <label>Blog</label>
+    </a>
+    <a class="item">
+      <i class="fa fa-github"></i>
+      <label>Github</label>
+    </a>
+  </div>
+#}

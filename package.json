@@ -1,0 +1,46 @@
+{
+  "name": "yuvilio.github.io",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuvilio/yuvilio.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.8",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-if": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-preprocess": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.2.17",
+    "gulpsmith": "^0.5.5",
+    "lodash": "^3.10.1",
+    "meow": "^3.7.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-fingerprint": "^1.0.3",
+    "metalsmith-in-place": "^1.3.1",
+    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.2",
+    "metalsmith-pagination": "^1.2.0",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-tags": "^1.0.0",
+    "minimist": "^1.2.0",
+    "nunjucks": "^2.1.0",
+    "nunjucks-date": "^1.1.2"
+  }
+}
