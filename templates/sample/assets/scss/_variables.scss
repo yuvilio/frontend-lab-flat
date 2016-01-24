@@ -1,0 +1,45 @@
+
+
+//colors
+$white       : #ffffff;
+$black       : #000000;
+
+
+//font awesome
+// @if ($env == 'development'){
+//   $fa-font-path: '/fonts'; //developmen
+// } @else {
+//   $fa-font-path: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts';
+// }
+
+
+//misc
+$transition: .2s ease;
+
+// layout
+$section-spacing: 30px;
+$section-spacing-mobile: 15px;
+
+
+//Foundation settings
+$body-bg: $white;
+// $primary-color: #008CBA;
+// $secondary-color: #e7e7e7;
+
+$font-smoothing: antialiased;
+
+//grid
+$grid-column-gutter: 30px;
+
+// d. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$small-breakpoint:  em-calc(640);
+$medium-breakpoint: em-calc(1024);
+$large-breakpoint:  em-calc(1440);
+$xlarge-breakpoint: em-calc(1920);
+$small-range:   (0, $small-breakpoint);
+$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+$large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
+$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));

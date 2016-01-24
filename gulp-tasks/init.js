@@ -16,9 +16,21 @@ module.exports = function(opts){
       console.log('made directories');
     }).then(function(){ //then copy starter files
 
+      //copy some files
       opts.gulp.src('templates/sample/_layouts/**/*.nunj')
         .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
         .pipe(opts.gulp.dest(labpath + '/_layouts'));
+
+      opts.gulp.src('templates/sample/.bowerrc')
+        .pipe(opts.gulp.dest(labpath));
+
+      opts.gulp.src('templates/sample/bower.json')
+        .pipe(opts.gulp.dest(labpath));
+
+      opts.gulp.src('templates/sample/assets/**/*.{js,json,scss,svg}')
+        .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
+        .pipe(opts.gulp.dest(labpath + '/assets/'));
+
 
 
     }).catch(function(er){
