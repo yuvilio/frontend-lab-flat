@@ -1,0 +1,9 @@
+{
+  "jsIncludePaths": [
+    "lab/sass-css/bower_components/jquery/dist/jquery.js",
+    "lab/sass-css/bower_components/foundation-sites/dist/foundation.js"
+  ],
+  "sassIncludePaths": [
+    "lab/sass-css/bower_components/foundation-sites/scss"
+  ]
+}

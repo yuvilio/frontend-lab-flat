@@ -1,9 +1,8 @@
 {
-  "labpath" : "sass-css/001-hello",
   "jsIncludePaths": [
 
   ],
   "sassIncludePaths": [
 
-  ],
+  ]
 }

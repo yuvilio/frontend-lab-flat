@@ -6,6 +6,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minimist = require('minimist');
 var browserSync = require("browser-sync"); //the running browserSync instance from gulpfile.js will be picked up and used here
 
+
 module.exports = function(opts){
 
 
@@ -13,11 +14,14 @@ module.exports = function(opts){
 
       var labPath = './lab/' + opts.config.labpath;
       var distPath = './dist/' + opts.config.labpath;
+      var batch = opts.config.labpath.split("/")[0]; //just the batch part
+      var batchLabPath = "lab/" + batch; //handy for common css/js for more than one example
+      var batchConfig = require('../' + batchLabPath + '/batch-config.json');
 
       var sassOptions = {
         // outputStyle: 'expanded',
         //make vendor stylesheet paths relatively importable from in scss
-        includePaths: ['./bower_components/foundation-sites/scss/']
+        includePaths: batchConfig.sassIncludePaths.concat( opts.config.sassIncludePaths )
       };
 
       var sourcemapsOptions = {
