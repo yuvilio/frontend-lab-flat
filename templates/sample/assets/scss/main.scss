@@ -6,11 +6,6 @@ $env: '/* @echo env */';
 
 @import "variables";
 
-@import "modules/foundation"; //custom foundation
-@include foundation-everything; //turn on foundation
-
-
-// @import "../../../node_modules/foundation-sites/scss/foundation";
 
 body {
   // background-color: green;
