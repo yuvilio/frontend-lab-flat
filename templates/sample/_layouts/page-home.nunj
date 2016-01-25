@@ -5,27 +5,8 @@
 {% block content %}
   <main class="main-wrap">
 
-    <div class="row">
-      <div class="small-4 small-offset-4 text-center">
-          <h1>labpath: {{labpath}}</h1>
-      </div>
-    </div>
+    {{contents}}
 
-    <div class="row">
-      <div class="small-12">
-
-      </div>
-    </div>
-
-
-    {# index.md contents  {{contents}} #}
 
   </main>
 {% endblock %}
-
-{#
-  {% for cta in ctas %}
-    key: {{ cta.key }}<br>
-    name: {{cta.name}}<br>
-  {% endfor %}
-  #}

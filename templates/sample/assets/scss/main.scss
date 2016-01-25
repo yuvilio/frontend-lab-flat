@@ -1,7 +1,8 @@
 //environment
 $env: '/* @echo env */';
 
-
+//batch stuff goes first
+@import "../../../assets/scss/main.scss";
 
 @import "variables";
 

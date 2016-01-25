@@ -42,6 +42,11 @@ module.exports = function(opts){
       fsp.stat(batchLabPath + "/bower.json").catch(function(){
         opts.gulp.src(['templates/sample/.bowerrc', 'templates/sample/bower.json'])
           .pipe(opts.gulp.dest(batchLabPath));
+
+          //batch level stylesheet
+          opts.gulp.src(['templates/sample/batch/assets/scss/main.scss'])
+            .pipe(opts.gulp.dest(batchLabPath + '/assets/scss'));
+
       })
 
       opts.gulp.src('templates/sample/assets/**/*.{js,json,scss,svg}')
