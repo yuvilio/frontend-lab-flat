@@ -1,9 +1,10 @@
 {
-  "labpath" : "sass-css/001-hello",
+  "labpath" : "sass-css/002-pseudo-elements",
+  "sassIncludePaths": [],
   "jsIncludePaths": [
-
+      "lab/sass-css/002-pseudo-elements/assets/js/main.js"
   ],
-  "sassIncludePaths": [
-
-  ],
+  "browserSync": {
+    "port" : 3004
+  }
 }

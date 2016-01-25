@@ -22,6 +22,7 @@ gulp.task('server', function () {
       // baseDir: distPath,
       'proxy': 'frontend-lab-flat.dev'
     },
+    port: (config.browserSync.port || 3000), 
     open: false
   });
 });
