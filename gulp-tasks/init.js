@@ -39,7 +39,7 @@ module.exports = function(opts){
 
       //copy some files
       opts.gulp.src('templates/sample/_layouts/**/*.nunj')
-        .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
+        .pipe($.preprocess({context: {distpath: distpath, labpath: labpath} })) //variables to expand
         .pipe(opts.gulp.dest(labpath + '/_layouts'));
 
       opts.gulp.src('templates/sample/**/*.md')

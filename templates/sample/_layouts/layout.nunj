@@ -16,7 +16,7 @@
       <!-- Place favicon.ico in the root directory -->
     #}
 
-    <link rel="stylesheet" href="/{{distpath}}/assets/css/main.css">
+    <link rel="stylesheet" href="/<!--  @echo distpath -->/assets/css/main.css">
 
   </head>
 
@@ -34,7 +34,7 @@
     {# general scripts #}
 
     {# scripts to combine with gulp-useref #}
-    <script src="/{{distpath}}/assets/js/all.js"></script>
+    <script src="/<!--  @echo distpath -->/assets/js/all.js"></script>
 
     <!-- test -->
 

@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')(); //make plugins available in $.
-var preprocess = require('gulp-preprocess');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minimist = require('minimist');
@@ -34,7 +33,7 @@ module.exports = function(opts){
 
       return opts.gulp.src( labPath + '/assets/scss/main.scss')
       .pipe($.sourcemaps.init())
-      .pipe(preprocess({context: { env: 'dev' }})) //make scss aware of environment
+      .pipe($.preprocess({context: { env: 'dev' }})) //make scss aware of environment
       .pipe(sass(sassOptions).on('error', sass.logError))
       .pipe(autoprefixer('last 2 version'))
       .pipe($.sourcemaps.write('./', sourcemapsOptions)) //write to same directory as generated css
