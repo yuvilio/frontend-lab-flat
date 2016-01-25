@@ -9,10 +9,6 @@ $env: '/* @echo env */';
 @import "modules/foundation"; //custom foundation
 @include foundation-everything; //turn on foundation
 
-//vendors
-// @import "vendor/font-awesome";
-// @import "vendor/highlight.js/foundation";
-
 
 // @import "../../../node_modules/foundation-sites/scss/foundation";
 

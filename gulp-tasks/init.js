@@ -44,7 +44,7 @@ module.exports = function(opts){
           .pipe(opts.gulp.dest(batchLabPath));
 
           //batch level stylesheet
-          opts.gulp.src(['templates/sample/batch/assets/scss/main.scss'])
+          opts.gulp.src(['templates/sample/batch/assets/scss/**/*.scss'])
             .pipe(opts.gulp.dest(batchLabPath + '/assets/scss'));
 
       })

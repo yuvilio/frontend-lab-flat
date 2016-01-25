@@ -1,1 +1,8 @@
+@import "variables"; //batch level variables
+
+//turn foundation on
+@import "modules/foundation"; //custom foundation
+@include foundation-everything; //turn on foundation
+
+//highlights
 @import "vendor/highlight.js/foundation";
