@@ -5,8 +5,14 @@
 {% block content %}
   <main class="main-wrap">
 
-    {{contents}}
+    <div class="row">
+      <div class="small-12">
 
+        {{contents}}
+
+      </div>
+    </div>
 
   </main>
+
 {% endblock %}

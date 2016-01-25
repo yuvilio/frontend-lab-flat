@@ -1,9 +1,13 @@
 {
   "jsIncludePaths": [
     "lab/sass-css/bower_components/jquery/dist/jquery.js",
-    "lab/sass-css/bower_components/foundation-sites/dist/foundation.js"
+    "lab/sass-css/assets/js/modernizr/modernizr.js",
+    "lab/sass-css/bower_components/foundation-sites/dist/foundation.js",
+    "lab/sass-css/assets/js/highlight.js/build/highlight.pack.js",
+    "lab/sass-css/assets/js/main.js"
+
   ],
   "sassIncludePaths": [
-    "lab/sass-css/bower_components/foundation-sites/scss"
+    "lab/sass-css/bower_components/foundation-sites/scss/"
   ]
 }

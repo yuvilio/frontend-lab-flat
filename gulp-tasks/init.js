@@ -21,6 +21,22 @@ module.exports = function(opts){
       console.log('made directories');
     }).then(function(){ //then copy starter files
 
+      //per batch assets (only run if they don't already exist since they might have been edited since)
+      fsp.stat(batchLabPath + "/batch-config.json").catch(function(){
+
+        opts.gulp.src('templates/sample/batch-config.json')
+          .pipe(opts.gulp.dest(batchLabPath));
+
+        opts.gulp.src(['templates/sample/.bowerrc', 'templates/sample/bower.json'])
+          .pipe(opts.gulp.dest(batchLabPath));
+
+        //batch level stylesheet
+        opts.gulp.src(['templates/sample/batch/assets/scss/**/*.scss'])
+          .pipe(opts.gulp.dest(batchLabPath + '/assets/scss'));
+
+      });
+
+
       //copy some files
       opts.gulp.src('templates/sample/_layouts/**/*.nunj')
         .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
@@ -30,24 +46,10 @@ module.exports = function(opts){
         .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
         .pipe(opts.gulp.dest(labpath));
 
-
-      opts.gulp.src('templates/sample/batch-config.json')
-        .pipe(opts.gulp.dest(batchLabPath));
-
       //per lab assets
       opts.gulp.src(['templates/sample/.bowerrc', 'templates/sample/bower.json'])
         .pipe(opts.gulp.dest(labpath));
 
-      //per batch assets (only run if they don't already exist since they might have been edited since)
-      fsp.stat(batchLabPath + "/bower.json").catch(function(){
-        opts.gulp.src(['templates/sample/.bowerrc', 'templates/sample/bower.json'])
-          .pipe(opts.gulp.dest(batchLabPath));
-
-          //batch level stylesheet
-          opts.gulp.src(['templates/sample/batch/assets/scss/**/*.scss'])
-            .pipe(opts.gulp.dest(batchLabPath + '/assets/scss'));
-
-      })
 
       opts.gulp.src('templates/sample/assets/**/*.{js,json,scss,svg}')
         .pipe($.nunjucks.compile({distpath: distpath, labpath: labpath}))
