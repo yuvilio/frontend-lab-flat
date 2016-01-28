@@ -17,7 +17,7 @@ module.exports = function(opts){
       var batchConfig = require('../' + batchLabPath + '/batch-config.json');
 
       return opts.gulp.src(
-        batchConfig.jsIncludePaths.concat(opts.config.jsIncludePaths)
+        batchConfig.jsIncludePaths.concat(opts.config.jsIncludePaths).concat([ labPath + 'assets/js/main.js'])
         // [
         // 'bower_components/jquery/dist/jquery.js',
         //
