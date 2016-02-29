@@ -197,7 +197,6 @@
     "test/webrtc/getusermedia",
     "test/websockets/binary",
     "test/window/matchmedia",
-    "test/workers/blobworkers",
     "test/workers/dataworkers",
     "test/workers/sharedworkers",
     "test/workers/transferables",
