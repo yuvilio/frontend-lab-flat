@@ -27,6 +27,9 @@ module.exports = function(opts){
         opts.gulp.src('templates/sample/batch-config.json')
           .pipe(opts.gulp.dest(batchLabPath));
 
+        opts.gulp.src('lib/misc/modernizr-config.json')
+          .pipe(opts.gulp.dest(batchLabPath + '/assets/js/modernizr'));
+
         opts.gulp.src(['templates/sample/.bowerrc', 'templates/sample/bower.json'])
           .pipe(opts.gulp.dest(batchLabPath));
 
