@@ -8,6 +8,9 @@ var layouts = require('metalsmith-layouts');
 
 var metadata          = require('metalsmith-metadata');
 var markdown          = require('metalsmith-markdown');
+var marked            = require('marked'); //the markdown processor metalsmith-markdown uses
+
+
 var permalinks        = require('metalsmith-permalinks');
 var collections       = require('metalsmith-collections');
 // var drafts            = require('metalsmith-drafts');
@@ -66,7 +69,16 @@ module.exports = function(opts){
             reverse: true
           }
         }))
-        .use(markdown()) //translate any markdown not in raw to html
+        .use(markdown({ //pass 'marked'  processor options here
+          renderer: new marked.Renderer(),
+          gfm: true,
+          tables: true,
+          breaks: false,
+          pedantic: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false
+        })) //translate any markdown not in raw to html
         .use(permalinks({
           pattern: 'posts/:title'
         }))
